@@ -1,0 +1,66 @@
+/**RESPONSIVE*/
+
+@media (max-width:768px) {
+    #firstName, #country {
+        margin-bottom: 1rem;
+    }
+    .ContactUs .Left_Icon {
+        width: 35px;
+        font-weight: 200;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .ContactUs h1 {
+        font-weight: 600 !important;
+        font-size: 1rem !important;
+        line-height: 1.2rem;
+    }
+    .ContactUs p {
+        font-weight: 400 !important;
+        font-size: 0.8rem !important;
+        line-height: 1rem;
+    }
+    .ContactUs .d-flex {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:540px) {
+    .title h1, .title p {
+        font-size: 2rem !important;
+        font-weight: 700 !important;
+    }
+    #services .circle {
+        width: 100px;
+        height: 100px;
+    }
+    #services .circle i {
+        width: 100px;
+        height: 100px;
+        font-size: 35px;
+        line-height: 100px;
+    }
+    #slider .middle {
+        font-size: 25px;
+    }
+    #btnUp {
+        bottom: 10px;
+        right: 10px;
+        padding: 3px;
+        font-size: 15px;
+    }
+    #slider .carousel-inner {
+        height: auto;
+    }
+    #options-container {
+        display: none !important;
+    }
+    #home {
+        padding-left: 0px !important;
+    }
+    #mobNav {
+        display: flex;
+    }
+}
+
+/**END RESPONSIVE*/
