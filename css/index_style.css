@@ -1,0 +1,594 @@
+/*css*/
+
+/*HOME*/
+
+#home .moveHome {
+    /* padding-left: 60px; */
+}
+
+/*END HOME*/
+
+.title {
+    text-align: center;
+    color: #D18B3F;
+}
+
+.title h1, .title p {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+}
+
+/*********** MOB NAV ***************/
+
+#mobNav {
+    display: none;
+}
+
+/***********END MOB NAV*************/
+
+/***************************SIDE NAVBAR*/
+
+#options-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+}
+
+.drawer {
+    background-color: #f8f6f6;
+    color: #3F2223;
+    text-align: center;
+    position: relative;
+    width: 60px;
+    height: 100vh;
+}
+
+.drawerLogo img {
+    height: 70px;
+    width: 60px;
+}
+
+.drawerMenu {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #D18B3F;
+}
+
+.drawerMenu i {
+    font-size: 25px;
+}
+
+.drawerSocial {
+    position: absolute;
+    cursor: pointer;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.navMenu {
+    /* background-image: linear-gradient(rgb(8, 8, 8), #62686E); */
+    /* background-image: linear-gradient(rgb(151, 87, 88), #3F2223); */
+    background-image: linear-gradient(#3b807b, #174845);
+    /* background-image: linear-gradient(#D18B3F, rgb(243, 199, 152));  */
+    /* background-image: linear-gradient(#3F2223, rgb(151, 87, 88)); */
+    width: 15.63rem;
+    height: 100vh;
+}
+
+.navMenu ul {
+    padding-left: 30px;
+    padding-top: 15px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.navMenu li {
+    list-style-type: none;
+    opacity: 0;
+    margin-top: 500px;
+}
+
+.navList ul li a {
+    color: #f9f6f6;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navList ul li a:hover {
+    color: #D18B3F;
+    font-weight: 1000;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#btnUp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 555;
+    display: none;
+    color: #D18B3F;
+    font-size: 30px;
+    padding: 8px;
+}
+
+/*************************** END SIDE NAVBAR*/
+
+/*
+trkwaz: #174845
+nbety: #3F2223
+bony: #352A24
+t7eny; #D18B3F
+grey fat7: #62686E
+bg: #363435
+*/
+
+/**HEADER*/
+
+/* #home header {
+    position: relative;
+    height: 600px; 
+    background-image: linear-gradient(#D18B3F, rgb(243, 199, 152)); 
+    background-image: url("../images/1.jpg");
+    background-size: cover;
+}
+
+ #home svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}  */
+
+#slider .carousel-inner {
+    height: 500px;
+}
+
+#slider {
+    clip-path: polygon(100% 0%, 100% 99%, 69% 84%, 47% 99%, 0% 78%, 0% 0%);
+}
+
+#slider img {
+    width: 100%;
+    height: 100%;
+}
+
+#slider .middle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+#slider #firstSlide .middle {
+    background-image: linear-gradient(rgba(243, 199, 152, 0.5), rgba(243, 199, 152, 0.5));
+    color: #174845;
+}
+
+#slider #secondSlide .middle {
+    background-image: linear-gradient(rgba(150, 82, 86, 0.4), rgba(150, 82, 86, 0.4));
+    color: #174845;
+}
+
+#slider #thirdSlide .middle {
+    background-image: linear-gradient(rgba(14, 165, 155, 0.4), rgba(15, 141, 133, 0.4));
+    color: rgb(150, 82, 86);
+}
+
+/**END HEADER/
+
+/**OUR SERVICES*/
+
+#services .title {
+    text-align: center;
+    font-size: 50px;
+    color: #D18B3F;
+    font-weight: 700 !important;
+}
+
+#services .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #174845;
+    margin: auto;
+}
+
+#services .circle i {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    font-size: 50px;
+    color: rgb(150, 82, 86);
+    line-height: 150px;
+    text-align: center;
+    background: #fff;
+    border: 4px solid #D18B3F;
+    margin: auto;
+}
+
+#services .circle:hover {
+    border: none;
+    color: #174845;
+}
+
+#services .circle i:hover {
+    border: 4px solid rgb(150, 82, 86);
+    color: rgb(150, 82, 86);
+}
+
+#services .desc h2 {
+    color: rgb(150, 82, 86);
+    font-size: 22px;
+    font-weight: 600 !important;
+}
+
+#services .col-md-4 {
+    margin-bottom: 2rem;
+}
+
+#services .desc {
+    margin-top: 1.5rem;
+}
+
+/**END OUR SERVICES*/
+
+/**OUR PROJECTS*/
+
+#ourProjects {
+    /* background-image: linear-gradient(#D18B3F, rgb(243, 199, 152));
+    background-image: linear-gradient( 270deg, rgb(236, 209, 181), #D18B3F); */
+    background-color: rgb(250, 231, 211);
+    /* background-color: #dcf5f3; */
+}
+
+.title h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #D18B3F;
+    font-weight: 700 !important;
+}
+
+.secTitle h1 {
+    margin: 0 !important;
+    padding: 0;
+}
+
+.Work h4 {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+    color: #174845;
+}
+
+.Work .card-body {
+    text-align: center;
+}
+
+.Work.Work .card {
+    border: #3F2223 3px solid !important;
+    margin: 0.5rem 0rem;
+}
+
+.Work .card h4 a {
+    font-size: 1.4rem;
+    color: #174845;
+    text-decoration: none !important;
+    transition: color 0.5s;
+}
+
+.Work .card h4 a:hover {
+    color: #D18B3F;
+}
+
+.Work .card h4 {
+    margin: 0.5rem 0rem 2rem 0rem;
+}
+
+.Work .card .btn {
+    background-color: transparent;
+    border: solid #D18B3F 2px;
+    color: rgb(150, 82, 86);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 900;
+    transition: color 0.5s;
+}
+
+.Work .card .btn:hover {
+    color: #D18B3F;
+    border: solid rgb(150, 82, 86) 2px;
+}
+
+.Work .img-contain {
+    position: relative;
+}
+
+/*
+trkwaz: #174845
+nbety: #3F2223
+bony: #352A24
+t7eny; #D18B3F
+grey fat7: #62686E
+bg: #363435
+*/
+
+.card-title {
+    text-align: center;
+}
+
+.Work .typeHint {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 0.6875rem;
+    color: white;
+    position: absolute;
+    padding: 0.625rem 0.93rem;
+    background-color: #3F2223;
+    top: 2rem;
+    right: 0;
+    cursor: pointer;
+}
+
+.card-img-top {
+    height: 200px;
+}
+
+/**END OUR PROJECTS*/
+
+/**REQUESTS*/
+
+.Request .form-control {
+    border: 1px solid #174845;
+}
+
+#submitRequest {
+    color: #D18B3F;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 900;
+    border: solid #D18B3F 2px;
+    transition: all 0.5s;
+}
+
+#submitRequest:hover {
+    color: #fff;
+    background-color: #D18B3F;
+    border: solid #D18B3F 2px;
+}
+
+.Request .form-row {
+    margin-bottom: 1rem;
+}
+
+#ErrorFName, #ErrorLName, #ErrorPhone, #ErrorEmail, #ErrorMsg, #ErrorCountry, #ErrorSubject {
+    display: none;
+    color: #3F2223;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: #174845 !important;
+}
+
+.form-control option {
+    color: #174845 !important;
+}
+
+/*END REQUESTS*/
+
+/**FOOTER*/
+
+footer {
+    background-image: linear-gradient(#3b807b, #174845);
+    /* background-image: linear-gradient(#D18B3F, rgb(243, 199, 152));  */
+    overflow: hidden;
+}
+
+.ContactUs p, .ContactUs h1 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.ContactUs i {
+    padding-top: 0.3rem;
+}
+
+.ContactUs .Left_Icon {
+    width: 50px;
+    font-weight: 200;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #D18B3F;
+    text-align: center;
+}
+
+.ContactUs h1 {
+    font-weight: 600 !important;
+    font-size: 1.125rem !important;
+    line-height: 1.5rem;
+    text-align: left !important;
+    color: #fff;
+    margin: 0;
+    margin-top: 0.5rem !important;
+}
+
+.ContactUs p {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    line-height: 1.5rem;
+    Color: #fff;
+}
+
+.ContactUs .d-flex {
+    margin-bottom: 1rem;
+}
+
+/**END FOOTER*/
+
+/*** 
+
+====================================================================
+  Service section
+====================================================================
+
+ ***/
+
+#service-section {
+    background: #232a34;
+    padding-bottom: 80px;
+}
+
+#service-section .theme-title h2, #service-section .theme-title p {
+    color: #fff;
+}
+
+#service-section .row {
+    margin: 50px 0 0 0;
+}
+
+#service-section .row [class*="col-"] {
+    padding-top: 25px;
+}
+
+#service-section .single-service-content {
+    border: 1px solid #808489;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 118px 23px 65px 23px;
+    overflow: hidden;
+}
+
+#service-section .single-service-content p {
+    transition-delay: 0.3s;
+    opacity: 0;
+    transform: translate3D(0, 200px, 0);
+    transition: all .4s ease-in-out;
+}
+
+#service-section .single-service-content .icon-heading {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 120px;
+}
+
+#service-section .single-service-content .icon-heading .icon {
+    font-size: 48px;
+    color: #808489;
+    width: 80px;
+    margin: 0 auto;
+    background: #232a34;
+}
+
+#service-section .single-service-content .icon-heading a {
+    color: #808489;
+    text-transform: capitalize;
+    margin-top: 33px;
+}
+
+#service-section .single-service-content:hover .icon-heading {
+    top: -10px;
+}
+
+#service-section .single-service-content:hover p {
+    opacity: 1;
+    color: #fff;
+    transform: translate3D(0, 0, 0);
+}
+#service-section .single-service-content:hover .icon-heading .icon,
+#service-section .single-service-content:hover .icon-heading h6 a {
+    color:#d73e4d;
+}
+#service-section .single-service-content:hover{
+    border-color:#d73e4d;
+    border-style: solid;
+}
+
+/*** 
+
+/**RESPONSIVE*/
+
+@media (max-width:768px) {
+    #firstName, #country {
+        margin-bottom: 1rem;
+    }
+    .ContactUs .Left_Icon {
+        width: 35px;
+        font-weight: 200;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .ContactUs h1 {
+        font-weight: 600 !important;
+        font-size: 1rem !important;
+        line-height: 1.2rem;
+    }
+    .ContactUs p {
+        font-weight: 400 !important;
+        font-size: 0.8rem !important;
+        line-height: 1rem;
+    }
+    .ContactUs .d-flex {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:540px) {
+    .title h1, .title p {
+        font-size: 2rem !important;
+        font-weight: 700 !important;
+    }
+    #services .circle {
+        width: 100px;
+        height: 100px;
+    }
+    #services .circle i {
+        width: 100px;
+        height: 100px;
+        font-size: 35px;
+        line-height: 100px;
+    }
+    #slider .middle {
+        font-size: 25px;
+    }
+    #btnUp {
+        bottom: 10px;
+        right: 10px;
+        padding: 3px;
+        font-size: 15px;
+    }
+    #slider .carousel-inner {
+        height: auto;
+    }
+    #options-container {
+        display: none !important;
+    }
+    #home {
+        padding-left: 0px !important;
+    }
+    #mobNav {
+        display: flex;
+    }
+}
+
+/**END RESPONSIVE*/
