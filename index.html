@@ -86,11 +86,24 @@
     <section id="home">
         <!-- HEADER -->
         <header>
-            <!-- <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon class="svg--sm" fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100" />
-            </svg> -->
+            </svg>
 
-            <section id="slider">
+            <div class="overlayer1"></div>
+            <div class="overlayer2"></div>
+            <div class="overlay-two d-flex justify-content-center align-items-center">
+                <p>
+                    <span class="title">ALL YOU NEED IN ONE PLACE</span>
+                    <br>
+                    we are
+                    <a href="" class="typewrite" data-period="2000"
+                        data-type='[ "creative.", "developers.", "designers.", "always available." ]'>
+                        <span class="wrap"></span>
+                    </a>
+                </p>
+            </div>
+            <!-- <section id="slider">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div id="firstSlide" class="carousel-item active">
@@ -121,26 +134,24 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-            </section>
+            </section> -->
         </header>
         <!-- END HEADER -->
 
 
         <!-- OUR SERVICES -->
         <section id="service-section">
-            <div class="container">
+            <div class="container-fluid">
 
                 <div class="theme-title">
-                    <div class="overlay">
+                    <div class="overlay d-flex justify-content-center align-items-center">
                         <h2>SERVICES WE PROVIDE</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                            of type.</p>
+                        <!-- <p>Lorem Ipsum is simply dummy text</p> -->
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 ">
                         <div class="single-service-content">
                             <div class="icon-heading tran3s">
                                 <div class="icon tran3s"><i class="fa fa-paint-brush" aria-hidden="true"></i></div>
@@ -152,7 +163,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 ">
                         <div class="single-service-content">
                             <div class="icon-heading tran3s">
                                 <div class="icon tran3s"><i class="fas fa-mobile-alt" aria-hidden="true"></i></div>
@@ -164,7 +175,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 ">
                         <div class="single-service-content">
                             <div class="icon-heading tran3s">
                                 <div class="icon tran3s"><i class="fas fa-ad" aria-hidden="true"></i></div>
@@ -176,7 +187,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 ">
                         <div class="single-service-content">
                             <div class="icon-heading tran3s">
                                 <div class="icon tran3s"><i class="fas fa-globe" aria-hidden="true"></i></div>
@@ -188,7 +199,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 ">
                         <div class="single-service-content">
                             <div class="icon-heading tran3s">
                                 <div class="icon tran3s"><i class="fas fa-photo-video" aria-hidden="true"></i></div>
@@ -200,7 +211,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="col-lg-4 col-md-6 ">
                         <div class="single-service-content">
                             <div class="icon-heading tran3s">
                                 <div class="icon tran3s"><i class="fas fa-tasks" aria-hidden="true"></i></div>
@@ -226,103 +237,264 @@
         <!-- END BANNER -->
 
         <!-- OUR PROJECTS -->
-        <section id="ourProjects" class="Work py-5">
-            <div class="m-auto text-center">
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="secTitle title">
-                        <h1>OUR PROJECTS</h1>
+        <div id="carouselExampleControls" class="carousel slide bg-dark" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <section class="content-section" id="portfolio">
+                        <div class="container">
+                            <div class="content-section-heading text-center">
+                                <h3 class="text-secondary mb-0">Portfolio</h3>
+                                <h2 class="mb-5">Recent Projects</h2>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Stationary</h2>
+                                                <p class="mb-0">A yellow pencil with envelopes on a clean, blue
+                                                    backdrop!</p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Ice Cream</h2>
+                                                <p class="mb-0">A dark blue background with a colored pencil, a clip,
+                                                    and a tiny ice
+                                                    cream cone!</p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Strawberries</h2>
+                                                <p class="mb-0">Strawberries are such a tasty snack, especially with a
+                                                    little sugar
+                                                    on top!</p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Workspace</h2>
+                                                <p class="mb-0">A yellow workspace with some scissors, pencils, and
+                                                    other objects.
+                                                </p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/3.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="content-section" id="portfolio">
+                        <div class="container">
+                            <div class="content-section-heading text-center">
+                                <h3 class="text-secondary mb-0">Portfolio</h3>
+                                <h2 class="mb-5">Recent Projects</h2>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Stationary</h2>
+                                                <p class="mb-0">A yellow pencil with envelopes on a clean, blue
+                                                    backdrop!</p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Ice Cream</h2>
+                                                <p class="mb-0">A dark blue background with a colored pencil, a clip,
+                                                    and a tiny ice
+                                                    cream cone!</p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Strawberries</h2>
+                                                <p class="mb-0">Strawberries are such a tasty snack, especially with a
+                                                    little sugar
+                                                    on top!</p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Workspace</h2>
+                                                <p class="mb-0">A yellow workspace with some scissors, pencils, and
+                                                    other objects.
+                                                </p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/3.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="content-section" id="portfolio">
+                        <div class="container">
+                            <div class="content-section-heading text-center">
+                                <h3 class="text-secondary mb-0">Portfolio</h3>
+                                <h2 class="mb-5">Recent Projects</h2>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Stationary</h2>
+                                                <p class="mb-0">A yellow pencil with envelopes on a clean, blue
+                                                    backdrop!</p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Ice Cream</h2>
+                                                <p class="mb-0">A dark blue background with a colored pencil, a clip,
+                                                    and a tiny ice
+                                                    cream cone!</p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Strawberries</h2>
+                                                <p class="mb-0">Strawberries are such a tasty snack, especially with a
+                                                    little sugar
+                                                    on top!</p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a class="portfolio-item" href="#">
+                                        <span class="caption">
+                                            <span class="caption-content">
+                                                <h2>Workspace</h2>
+                                                <p class="mb-0">A yellow workspace with some scissors, pencils, and
+                                                    other objects.
+                                                </p>
+                                            </span>
+                                        </span>
+                                        <img class="img-fluid" src="./images/3.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- <section class="content-section" id="portfolio">
+            <div class="container">
+                <div class="content-section-heading text-center">
+                    <h3 class="text-secondary mb-0">Portfolio</h3>
+                    <h2 class="mb-5">Recent Projects</h2>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>Stationary</h2>
+                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                                </span>
+                            </span>
+                            <img class="img-fluid" src="./images/3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>Ice Cream</h2>
+                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice
+                                        cream cone!</p>
+                                </span>
+                            </span>
+                            <img class="img-fluid" src="./images/2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>Strawberries</h2>
+                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar
+                                        on top!</p>
+                                </span>
+                            </span>
+                            <img class="img-fluid" src="./images/2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>Workspace</h2>
+                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.
+                                    </p>
+                                </span>
+                            </span>
+                            <img class="img-fluid" src="./images/3.jpg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="container my-5">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div>
-                            <div class="card border-0">
-                                <div class="img-contain">
-                                    <img class="card-img-top" src="images/webdesign.jpg" alt="Card image cap">
-                                    <div class="typeHint rounded-left">WEB DESIGN</div>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="">Repair company</a></h4>
-                                    <a href="#" class="btn">Show details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div>
-                            <div class="card border-0">
-                                <div class="img-contain">
-                                    <img class="card-img-top" src="images/app.jpg" alt="Card image cap">
-                                    <div class="typeHint rounded-left">APP DEVELOPMENT</div>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="">Repair company</a></h4>
-                                    <a href="#" class="btn">Show details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div>
-                            <div class="card border-0">
-                                <div class="img-contain">
-                                    <img class="card-img-top" src="images/marketing.jpg" alt="Card image cap">
-                                    <div class="typeHint rounded-left">E-MARKETING</div>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="">Repair company</a></h4>
-                                    <a href="#" class="btn">Show details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div>
-                            <div class="card border-0">
-                                <div class="img-contain">
-                                    <img class="card-img-top" src="images/smedia.jpg" alt="Card image cap">
-                                    <div class="typeHint rounded-left">SOCIAL MEDIA MANAGE</div>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="">Repair company</a></h4>
-                                    <a href="#" class="btn">Show details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div>
-                            <div class="card border-0">
-                                <div class="img-contain">
-                                    <img class="card-img-top" src="images/video.jpg" alt="Card image cap">
-                                    <div class="typeHint rounded-left">VIDEO DESIGN</div>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="">Repair company</a></h4>
-                                    <a href="#" class="btn">Show details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div>
-                            <div class="card border-0">
-                                <div class="img-contain">
-                                    <img class="card-img-top" src="images/identity.jpg" alt="Card image cap">
-                                    <div class="typeHint rounded-left">IDENTITY DESIGN</div>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="">Repair company</a></h4>
-                                    <a href="#" class="btn">Show details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </section> -->
         <!-- END OUR PROJECTS -->
 
 
