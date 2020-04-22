@@ -1,5 +1,9 @@
 /**RESPONSIVE*/
 
+@media (max-width:880px) {
+
+}
+
 @media (max-width:768px) {
     #firstName, #country {
         margin-bottom: 1rem;
@@ -60,6 +64,12 @@
     }
     #mobNav {
         display: flex;
+    }
+    #service-section {
+        margin:30px;
+    }
+    #service-section .single-service-content {
+        padding: 60px 10px 30px 10px;
     }
 }
 
