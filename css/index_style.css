@@ -250,7 +250,7 @@ bg: #363435
     pointer-events: none;
 }
 #home .overlay-two .title{
-    background-image: url("./images/stroke1.png");
+    background-image: url("../images/stroke1.png");
     padding: 20px;
     color: #50CFD1;
     font-size: 20px;
@@ -276,7 +276,7 @@ bg: #363435
 
 #service-section .theme-title {
     position: relative;
-    background-image: url("./images/work.jpg");
+    background-image: url("../images/work.jpg");
     background-size: cover;
     border-radius: 15px;
     height: 300px;
@@ -378,7 +378,7 @@ bg: #363435
 
 /** BANNER */
 #banner {
-    background: url("./images/net.jpg") no-repeat center;
+    background: url("../images/net.jpg") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     margin-top: 70px;
