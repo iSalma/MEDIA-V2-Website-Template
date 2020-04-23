@@ -200,7 +200,7 @@ bg: #363435
     position: relative;
     height: 700px; 
     background-image: linear-gradient(#D18B3F, rgb(243, 199, 152)); 
-    background-image: url("../images/webdesign.jpg");
+    background-image: url("../images/head.jpg");
     background-size: cover;
     margin-bottom: 100px;    
     /* clip-path: polygon(50% 0%, 100% 0, 100% 88%, 80% 100%, 56% 89%, 29% 100%, 0 76%, 0 0); */
@@ -237,26 +237,34 @@ bg: #363435
 }
 
 #home .overlay-two p{
-    color: rgb(150, 82, 86);
+    color: #D1508E;
     font-size: 30px;
     font-weight: 500;
 }
 
 #home .overlay-two a{
-    color: #fff;
+    color: #ffffe4;
     font-size: 50px;
     font-weight: 700;
     text-decoration: none;
     pointer-events: none;
 }
 #home .overlay-two .title{
-    color: #174845;
+    background-image: url("/images/stroke1.png");
+    padding: 20px;
+    /* background-color: #25d366; */
+    color: #50CFD1;
     font-size: 20px;
     font-weight: 200;
     text-decoration: none;
     pointer-events: none;
 }
 
+#home .overlay-two .color{
+    color: #D18B3F;
+    font-size: 30px;
+    font-weight: 500;
+}
 /**END HEADER/
 
 
