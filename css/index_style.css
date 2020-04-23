@@ -235,13 +235,11 @@ bg: #363435
     width: 100%;
     clip-path: polygon(0% 0%, 0% 88%, 57% 99%, 79% 84%,  100% 99%, 100% 0% );
 }
-
 #home .overlay-two p{
     color: #D1508E;
     font-size: 30px;
     font-weight: 500;
 }
-
 #home .overlay-two a{
     color: #ffffe4;
     font-size: 50px;
@@ -252,13 +250,13 @@ bg: #363435
 #home .overlay-two .title{
     background-image: url("../images/stroke1.png");
     padding: 20px;
+    /* background-color: #25d366; */
     color: #50CFD1;
     font-size: 20px;
     font-weight: 200;
     text-decoration: none;
     pointer-events: none;
 }
-
 #home .overlay-two .color{
     color: #D18B3F;
     font-size: 30px;
@@ -276,7 +274,7 @@ bg: #363435
 
 #service-section .theme-title {
     position: relative;
-    background-image: url("../images/work.jpg");
+    background-image: url("/images/work.jpg");
     background-size: cover;
     border-radius: 15px;
     height: 300px;
@@ -378,7 +376,7 @@ bg: #363435
 
 /** BANNER */
 #banner {
-    background: url("../images/net.jpg") no-repeat center;
+    background: url("/images/net.jpg") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     margin-top: 70px;
