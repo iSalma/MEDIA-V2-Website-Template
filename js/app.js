@@ -1,12 +1,9 @@
 //js
 
+
 //SIDE NAV BAR//////////////////////////////////
 let navWidth = $(".navMenu").outerWidth(true);
-let drawerWidth = $(".drawer").outerWidth(true);
-let sumWidth = navWidth + drawerWidth;
-
 $("#options-container").css("left", `-${navWidth}px`);
-$("#home").css("padding-left", `${drawerWidth}px`);
 
 $("#toggleNav").click(function () {
     $(".fa-align-justify").toggleClass("fa-times");
@@ -14,7 +11,6 @@ $("#toggleNav").click(function () {
     if ($("#options-container").css("left") == "0px") {
         $("#options-container").animate({ left: `-${navWidth}px` }, 500);
         $(".navMenu li").animate({ opacity: "0", marginTop: "500px" });
-        $("#home").animate({paddingLeft: `${drawerWidth}px`},500);
     }
     else {
         $("#options-container").animate({ left: `0px` }, 500);
@@ -24,70 +20,201 @@ $("#toggleNav").click(function () {
         $(".navMenu .li4").animate({ opacity: "1", marginTop: "8px" }, 1500);
         $(".navMenu .li5").animate({ opacity: "1", marginTop: "8px" }, 1600);
         $(".navMenu .li6").animate({ opacity: "1", marginTop: "8px" }, 1700);
-        $("#home").animate({paddingLeft: `${sumWidth}px`},500);
     }
-
 })
 //END SIDE NAV BAR///////////////////////////////////////////////
 
-
-//typewriter///////////////////////////////////
-
-var TxtType = function(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-};
-
-TxtType.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
-
-    if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
+//VALIDATE DATA ////////////////////////////////////////////////
+function validateName(inputValue) {
+    var nameRegex = /^[a-z][a-z ]{1,20}$/i;
+    if (nameRegex.test(inputValue) == false) {
+        $("#nameAlert").css("display", "block");
     }
-
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-    var that = this;
-    var delta = 200 - Math.random() * 100;
-
-    if (this.isDeleting) { delta /= 2; }
-
-    if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
+    else {
+        $("#nameAlert").css("display", "none");
     }
+}
 
-    setTimeout(function() {
-    that.tick();
-    }, delta);
-};
+function validateEmail(inputValue) {
+    var emailRegex = /^([a-zA-Z][a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+    if (emailRegex.test(inputValue) == false) {
+        $("#emailAlert").css("display", "block");
+    }
+    else {
+        $("#emailAlert").css("display", "none");
+    }
+}
 
-window.onload = function() {
-    var elements = document.getElementsByClassName('typewrite');
-    for (var i=0; i<elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
+function validatePhone(inputValue) {
+    var phoneRegex = /^(\+02)?(01)[0125][0-9]{8}$/;
+    if (phoneRegex.test(inputValue) == false) {
+        $("#phoneAlert").css("display", "block");
+    }
+    else {
+        $("#phoneAlert").css("display", "none");
+    }
+}
+
+function validateAge(inputValue) {
+    var ageRegex = /([1-9][0-9]{1,2})$/;
+    if (ageRegex.test(inputValue) == false) {
+        $("#ageAlert").css("display", "block");
+    }
+    else {
+        $("#ageAlert").css("display", "none");
+    }
+}
+
+function validatePw(inputValue) {
+    var pwRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/;
+    if (pwRegex.test(inputValue) == false) {
+        $("#pwAlert").css("display", "block");
+    }
+    else {
+        $("#pwAlert").css("display", "none");
+    }
+}
+
+function validateRePw(inputValue) {
+    let pw = $("#pwInp").val();
+    let rePw = $("#rePwInp").val();
+    if (pw != rePw) {
+        $("#rePwAlert").css("display", "block");
+        return false;
+    }
+    else {
+        $("#rePwAlert").css("display", "none");
+        return true;
+    }
+}
+
+$("#nameAlert").css("marginTop", `-15px`);
+$("#emailAlert").css("marginTop", `-15px`);
+$("#phoneAlert").css("marginTop", `-15px`);
+$("#ageAlert").css("marginTop", `-15px`);
+$("#pwAlert").css("marginTop", `-15px`);
+$("#rePwAlert").css("marginTop", `-15px`);
+
+//END VALIDATION////////////////////////////////
+
+// VALIDATE FORM ///////////////////////
+function submit() {
+
+    var userName = document.getElementById("nameInp").value;
+    var email = document.getElementById("emailInp").value;
+    var phone = document.getElementById("phoneInp").value;
+    var age = document.getElementById("ageInp").value;
+    var pw = document.getElementById("pwInp").value;
+    var rePw = document.getElementById("rePwInp").value;
+
+    if (validateName(userName) == true || validateEmail(email) == true || validatePhone(phone) == true || validateAge(age) == true || validatePw(pw) == true || validateRePw(rePw) == true) {
+
+    }
+    else {
+        //window.alert("Not Valid Input")
+    }
+}
+
+function clearForm() {
+    let ips = $("input");
+    for (let i = 0; i < ips.length; i++) {
+        ips[i].value = "";
+    }
+}
+
+// END VALIDATE FORM ///////////////////////
+
+//GET MOVIES DATA/////////////////
+var allData = [];
+var httpReq = new XMLHttpRequest();
+let pathMovie = "now_playing";
+$(".navList .liEle").click(function () {
+    pathMovie = $(this).attr('id');
+    getData(pathMovie);
+})
+
+getData(pathMovie);
+
+var links = document.querySelectorAll(".nav-link");
+
+function getData(pathMovie) {
+    // httpReq.open("GET", "https://api.themoviedb.org/3/movie/now_playing?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR1Es0Xl_Rp_okaNkNthYUTcOl0gaUmS6B60sbvHb1_zk-ps3j5p85aWKaY")
+
+    httpReq.open("GET", "https://api.themoviedb.org/3/movie/" + pathMovie + "?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR1Es0Xl_Rp_okaNkNthYUTcOl0gaUmS6B60sbvHb1_zk-ps3j5p85aWKaY")
+    httpReq.send();
+    httpReq.onreadystatechange = function () {
+        if (httpReq.readyState == 4 && httpReq.status == 200) {
+
+            allData = JSON.parse(httpReq.response).results;
+            displayData();
         }
     }
-};
-// TYPEWRITER//////////////////////////////////
+
+}
+function displayData() {
+    var temp = ``;
+
+    for (var i = 0; i < allData.length; i++) {
+        temp += `
+        <div class="col-md-6 col-lg-4 my-3">
+          <div class="movieShow ">
+            <div class="onMovie">
+                <img src="https://image.tmdb.org/t/p/w500`+ allData[i].poster_path + `" class="img-fluid"/>
+                <div class="movieLayer d-flex align-items-center">
+                    <div class="movieInfo">
+                        <h5>`+ allData[i].original_title + `</h5>
+                        <p>`+ allData[i].overview + `</p>
+                        <p> Rate: `+ allData[i].vote_average + `</p>
+                    </div>
+                </div>
+             </div>
+          </div>
+        </div>`;
+    }
+
+    document.getElementById("moviesRow").innerHTML = temp;
+}
+//END GET MOVIES DATA/////////////////
+
+
+//SEARCH MOVIE////////////////////////////
+function searchMovie(term) {
+    var temp = ``;
+    for (var i = 0; i < allData.length; i++) {
+        if (allData[i].original_title.toLowerCase().includes(term.toLowerCase())) {
+            temp += `
+        <div class="col-md-6 col-lg-4 my-3">
+          <div class="movieShow ">
+            <div class="onMovie">
+                <img src="https://image.tmdb.org/t/p/w500`+ allData[i].poster_path + `" class="img-fluid"/>
+                <div class="movieLayer d-flex align-items-center">
+                    <div class="movieInfo">
+                        <h5>`+ allData[i].original_title + `</h5>
+                        <p>`+ allData[i].overview + `</p>
+                        <p> Rate: `+ allData[i].vote_average + `</p>
+                    </div>
+                </div>
+             </div>
+          </div>
+        </div>`;
+        }
+    }
+    document.getElementById("moviesRow").innerHTML = temp;
+}
+
+//END SEARCH MOVIE ////////////////////
+
+//LOADING SCREEN///////////////////
+$(window).on("load", function () {
+    $("#loading").fadeOut(1000, function () {
+        $("body").css("overflow", "auto");
+        clearForm();
+    })
+})
+//END LOADING SCREEN///////////////////
 
 //BUTTON UP//////////////////////////////////////////////
-let searchBarOffset = $("#service-section").offset().top;
+let searchBarOffset = $("#searchMovieID").offset().top;
 
 $(window).scroll(function () {
 
@@ -106,199 +233,3 @@ $("#btnUp").click(function () {
     $("html, body").animate({ scrollTop: '0' }, 1000);
 })
 //END BUTTON UP//////////////////////////////////////////////
-
-
-
-
-/*Getting request values*/
-var firstName=document.getElementById("firstName");
-var secondName=document.getElementById("secondName");
-var phone=document.getElementById("phone");
-var country=document.getElementById("country");
-var email=document.getElementById("email");
-var subject=document.getElementById("subject");
-var message=document.getElementById("exampleFormControlTextarea1");
-/* */
-/*Validation*/
-var firstNameValid=false;
-var secondNameValid=false;
-var phoneValid=false;
-var countryValid=false;
-var emailValid=false;
-/*********************/
-
-/*Validate firstName*/
-firstName.addEventListener("keyup",function()
-{
-    var regEx = /^[a-zA-Z]{3,8}$/;
-    var nameP=firstName.value;
-    if(nameP=="")
-    {
-        /*Still empty*/
-        firstNameValid=false;
-        $("#ErrorFName").css("display","none");
-    }
-    else if((regEx.test(nameP)==true))
-    {
-        /*No error*/
-        firstNameValid=true;
-        $("#ErrorFName").css("display","none");
-    }
-    else
-    {
-        /*error*/
-        firstNameValid=false;
-        $("#ErrorFName").css("display","block");
-    }
-});
-/*********************/
-
-/*Validate secondName*/
-secondName.addEventListener("keyup",function()
-{
-    var regEx = /^[a-zA-Z]{3,8}$/;
-    var nameP=secondName.value;
-    if(nameP=="")
-    {
-        /*Still empty*/
-        secondNameValid=false;
-        $("#ErrorLName").css("display","none");
-    }
-    else if((regEx.test(nameP)==true))
-    {
-        /*No error*/
-        secondNameValid=true;
-        $("#ErrorLName").css("display","none");
-    }
-    else
-    {
-        /*error*/
-        secondNameValid=false;
-        $("#ErrorLName").css("display","block");
-    }
-});
-/*********************/
-
-/*Validate phone*/
-phone.addEventListener("keyup",function()
-{
-    var regEx = /^[0-9]{8}$/;
-    var phoneP=phone.value;
-    if(phoneP=="")
-    {   /*Still empty*/
-        phoneValid=false;
-        $("#ErrorPhone").css("display","none");
-    }
-    else if((regEx.test(phoneP)==true))
-    {   /*No error*/
-        phoneValid=true;
-        $("#ErrorPhone").css("display","none");
-    }
-    else
-    {   /*error*/
-        phoneValid=false;
-        $("#ErrorPhone").css("display","block");
-    }
-});
-/*********************/
-
-/*Validate email*/
-email.addEventListener("keyup",function()
-{
-    var regEx = /^[a-zA-Z].{5,19}@(gmail|yahoo).com$/;
-    var emailP=email.value;
-    if(emailP=="")
-    {
-        /*Still empty*/
-        emailValid=false;
-        $("#ErrorEmail").css("display","none");
-    }
-    else if((regEx.test(emailP)==true))
-    {   
-        /*No error*/
-        emailValid=true;
-        $("#ErrorEmail").css("display","none");
-    }
-    else
-    {
-        /*error*/
-        emailValid=false;
-        $("#ErrorEmail").css("display","block");
-    }
-});
-/*********************/
-
-/*Validate message*/
-message.addEventListener("keyup",function()
-{
-    var regEx = /^.{10,1000}$/;
-    var messageP=message.value;
-    if(messageP=="")
-    {
-        /*Still empty*/
-        messageValid=false;
-        $("#ErrorMsg").css("display","none");
-    }
-    else if((regEx.test(messageP)==true))
-    {   
-        /*No error*/
-        messageValid=true;
-        $("#ErrorMsg").css("display","none");
-    }
-    else
-    {
-        /*error*/
-        messageValid=false;
-        $("#ErrorMsg").css("display","block");
-    }
-});
-/*********************/
-
-
-/*Validate subject*/
-subject.addEventListener("change",function()
-{
-    if(subject.value=='Subject')
-    {
-        $("#ErrorSubject").css("display","block");
-    }
-   else
-    {
-        $("#ErrorSubject").css("display","none");
-    }
-}
-)
-/*********************/
-
-/*Validate Country*/
-country.addEventListener("change",function()
-{
-    if(country.value=='Country')
-    {
-        $("#ErrorCountry").css("display","block");
-    }
-   else
-    {
-        $("#ErrorCountry").css("display","none");
-    }
-}
-)
-/*********************/
-
-
-/*********************/
-
-$('#submitRequest').click(function()
-{
-    if(subject.value=='Subject')
-    {
-        $("#ErrorSubject").css("display","block");
-    }
-    if(country.value=='Country')
-    {
-        $("#ErrorCountry").css("display","block");
-    }
-}
-)
-;/*********************/
-
