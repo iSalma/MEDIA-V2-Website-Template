@@ -241,7 +241,7 @@ bg: #363435
     font-weight: 500;
 }
 #home .overlay-two a{
-    color: #ffffe4;
+    color: #fff;
     font-size: 50px;
     font-weight: 700;
     text-decoration: none;
@@ -378,12 +378,13 @@ bg: #363435
 /** BANNER */
 #banner {
     background-image:url("../images/net.jpg");
+    background: linear-gradient(0deg, #50CFD1, #d18b3f, #D1508E);
     background-size: cover;
     background-attachment: fixed;
     margin-top: 70px;
   }
 #banner .opacity {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 134px 0 137px 0;
   }
@@ -407,7 +408,7 @@ bg: #363435
 
 /*HOVER BUTTON*/
 #banner .hvr-bounce-to-right, #Projects .hvr-bounce-to-right, #Requests .hvr-bounce-to-right {
-    border: 1px solid #D18B3F;
+    border: 2px solid #D18B3F;
     text-decoration: none;
     display: inline-block;
     transform: translateZ(0);
@@ -598,7 +599,7 @@ color: #666;
 }
 .Clients 
 {
-    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('../images/Client.png');
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('../images/client.png');
     background-size: cover;
 }
 .Clients .fa-quote-right
