@@ -265,12 +265,29 @@ bg: #363435
 
 /**END HEADER/
 
+/*TITELS*/
+.heading {
+    font-size: 8rem;
+    letter-spacing: 6px;
+    margin: 2rem 0;
+  }
+  .heading--stroke {
+    -webkit-text-stroke-width: 1px;
+    -moz-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #D18B3F;
+    -moz-text-stroke-color: #D1508E;
+    color: transparent;
+  }
+  .heading--shadow {
+    text-shadow: 6px 6px rgb(140, 214, 224);
+  }
+/* END TITELS*/
 
 
 /** SERVICES */
 
 #service-section {
-    margin:50px;
+    margin:0px;
 }
 
 #service-section .theme-title {
@@ -282,14 +299,15 @@ bg: #363435
 }
 #service-section .theme-title h2{
     color: #fff;
+    font-size: 50px;
     text-align: center;
 } 
 
-#service-section .theme-title p {
+/* #service-section .theme-title p {
     padding: 25px;
     color: #fff;
     text-align: center;
-}
+} */
 
 #service-section .overlay {
     position: absolute;
@@ -378,13 +396,13 @@ bg: #363435
 /** BANNER */
 #banner {
     background-image:url("../images/net.jpg");
-    background: linear-gradient(0deg, #50CFD1, #d18b3f, #D1508E);
+    background: linear-gradient(0deg, rgb(155, 237, 238), rgb(245, 121, 181));
     background-size: cover;
     background-attachment: fixed;
     margin-top: 70px;
   }
 #banner .opacity {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
     text-align: center;
     padding: 134px 0 137px 0;
   }
@@ -438,6 +456,8 @@ bg: #363435
 
 
 /**OUR PROJECTS*/
+
+
 .project h4 a:hover
 {
     color: #D18B3F;
