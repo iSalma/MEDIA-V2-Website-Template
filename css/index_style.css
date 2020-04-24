@@ -13,7 +13,7 @@ body::-webkit-scrollbar-track {
     background: #1e1e1e;        /* color of the tracking area */
 }
 body::-webkit-scrollbar-thumb {
-    background-color: #D18B3F;    /* color of the scroll thumb */
+    background-color: #D1508E;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid #1e1e1e;  /* creates padding around scroll thumb */
 }
@@ -138,13 +138,14 @@ body::-webkit-scrollbar-thumb {
 .navMenu {
     /* background-image: linear-gradient(rgb(8, 8, 8), #62686E); */
     /* background-image: linear-gradient(rgb(151, 87, 88), #3F2223); */
-    background-image: linear-gradient(#3b807b, #174845);
+    /* background-image: linear-gradient(rgb(221, 188, 194), #C997A0); */
     /* background-image: linear-gradient(#D18B3F, rgb(243, 199, 152));  */
     /* background-image: linear-gradient(#3F2223, rgb(151, 87, 88)); */
+    background-image: linear-gradient(rgb(235, 176, 114),rgb(187, 118, 44));
     width: 12.63rem;
     height: 100vh;
+    opacity: 0.95;
 }
-
 .navMenu ul {
     padding-left: 30px;
     padding-top: 15px;
@@ -162,14 +163,15 @@ body::-webkit-scrollbar-thumb {
     color: #f9f6f6;
     font-size: 16px;
     font-weight: 600;
+    transition: all 0.3s;
 }
 
 .navList ul li a:hover {
-    color: #D18B3F;
     font-weight: 1000;
     margin-left: 10px;
     text-decoration: none;
-    transition: all 0.3s;
+    border-left: 4px solid #D1508E;
+    padding: 5px;
 }
 
 #btnUp {
@@ -180,7 +182,6 @@ body::-webkit-scrollbar-thumb {
     display: none;
     color: #D18B3F;
     font-size: 30px;
-    padding: 8px;
 }
 
 /*************************** END SIDE NAVBAR*/
@@ -195,10 +196,9 @@ bg: #363435
 */
 
 /**HEADER*/
-
 #home header {
     position: relative;
-    height: 700px; 
+    height: 500px; 
     background-image: linear-gradient(#D18B3F, rgb(243, 199, 152)); 
     background-image: url("../images/head.jpg");
     background-size: cover;
@@ -262,6 +262,7 @@ bg: #363435
     font-size: 30px;
     font-weight: 500;
 }
+
 /**END HEADER/
 
 
@@ -274,7 +275,7 @@ bg: #363435
 
 #service-section .theme-title {
     position: relative;
-    background-image: url("/images/work.jpg");
+    background-image: url("../images/work.jpg");
     background-size: cover;
     border-radius: 15px;
     height: 300px;
@@ -309,9 +310,9 @@ bg: #363435
 
 #service-section .single-service-content {
     background-color: #fff;
-    border: 1px solid rgb(150, 82, 86);
+    border: 1px solid #C997A0;
     border-radius: 15px;
-    box-shadow: 0px 0px 9px 6px rgba(150,82,86,0.57);
+    box-shadow: 0px 0px 9px 6px #C997A0;
     text-align: center;
     margin-bottom: 20px;
     padding: 100px 20px 60px 20px;
@@ -335,7 +336,7 @@ bg: #363435
 
 #service-section .single-service-content .icon-heading .icon {
     font-size: 48px;
-    color: rgb(150, 82, 86);
+    color: #D1508E;
     width: 80px;
     margin: 0 auto;
     background: #fff;
@@ -343,7 +344,7 @@ bg: #363435
 }
 
 #service-section .single-service-content .icon-heading a {
-    color: rgb(150, 82, 86);
+    color:#220901;
     text-transform: capitalize;
     margin-top: 33px;
 }
@@ -376,13 +377,13 @@ bg: #363435
 
 /** BANNER */
 #banner {
-    background: url("/images/net.jpg") no-repeat center;
+    background-image:url("../images/net.jpg");
     background-size: cover;
     background-attachment: fixed;
     margin-top: 70px;
   }
 #banner .opacity {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.7);
     text-align: center;
     padding: 134px 0 137px 0;
   }
@@ -399,7 +400,7 @@ bg: #363435
     border-width:1px;
   }
   #banner .andColor {
-      color: #D18B3F;
+      color: #50CFD1;
   }
   
 /** END BANNER */
@@ -436,26 +437,21 @@ bg: #363435
 
 
 /**OUR PROJECTS*/
-.project h4 a
-{
-font-size: 1.4rem;
-color:#174845;
-text-decoration: none !important;
-transition: color 0.5s;
-}
 .project h4 a:hover
 {
     color: #D18B3F;
 }
 .project h4
 {
-    margin: 0.5rem 0rem 2rem 0rem;
+    margin-bottom: 1.8rem;
+    color: #D18B3F;
+    font-size: 1.2rem;
+    font-weight: 900;
 }
 .project .btn
 {
     background-color: transparent;
     border: solid #D18B3F 2px;
-    color: white;
     cursor: pointer;
     font-size: 0.8rem;
     font-weight: 900;
@@ -468,7 +464,7 @@ transition: color 0.5s;
     color:white ;
     position: absolute;
     padding:0.625rem 0.5rem 0.625rem 1.3rem;
-    background-color: #3F2223;
+    background-color: #D1508E;
     top: 2rem;
     right: 0;
     cursor: pointer;
@@ -484,7 +480,7 @@ transition: color 0.5s;
     bottom: 0;
     transition: all 0.6s;
     color:white;
-    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../images/webdesign.jpg');
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/webdesign.jpg');
 }
 .overlay
 {
@@ -512,6 +508,7 @@ transition: color 0.5s;
 {
     color:#fff;
     padding: 10px;
+    margin-top: 2rem !important;
 }
 #Projects .col-md-6
 {
@@ -553,15 +550,15 @@ transition: color 0.5s;
 }
 .filterProjects a:hover
 {
-    color: #D18B3F !important;
+    color: #50CFD1 !important;
     font-size: 0.8rem ;
-    border-bottom:1px #D18B3F solid ;
+    border-bottom:1px #50CFD1 solid ;
 }
 .hvr-a
 {
-    color: #D18B3F !important;
+    color: #50CFD1 !important;
     font-size: 0.8rem ;
-    border-bottom:1px #D18B3F solid ;
+    border-bottom:1px #50CFD1 solid ;
 }
 
 /**END OUR PROJECTS*/
@@ -601,7 +598,7 @@ color: #666;
 }
 .Clients 
 {
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://www.reviews.io/cw-assets/img/all-global-assets/pages/homepage/category-background--flowers.jpg');
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('../images/client.png');
     background-size: cover;
 }
 .Clients .fa-quote-right
@@ -623,7 +620,7 @@ color: #666;
 }
 .Clients .fa-chevron-left,.Clients .fa-chevron-right
 {
-    background-color: #757473;
+    background-color: #D18B3F;
     border-radius: 50%;
     padding:10px !important;
     color: white;
@@ -632,7 +629,8 @@ color: #666;
 }
 .Clients .fa-chevron-left:hover,.Clients .fa-chevron-right:hover
 {
-    background-color: #949392;
+    background-color: white;
+    color: #D18B3F;
 }
 
 /**END OUR CLIENTS*/
@@ -692,11 +690,12 @@ color: #666;
     font-weight: 200;
     font-size: 2rem;
     line-height: 2rem;
-    color: #D18B3F;
+    color: #D1508E;
     text-align: center;
+    transition: color 1s;
 }
 .ContactUs .email:hover .Left_Icon, .ContactUs .phone:hover .Left_Icon, .ContactUs .address:hover .Left_Icon  {
-    color: rgb(150, 82, 86);
+    color: #C997A0;
 }
 
 .ContactUs h1 {
