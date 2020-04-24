@@ -599,7 +599,7 @@ color: #666;
 }
 .Clients 
 {
-    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('../images/client.png');
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('../images/Client.png');
     background-size: cover;
 }
 .Clients .fa-quote-right
